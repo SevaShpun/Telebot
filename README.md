@@ -3,6 +3,9 @@
 ### Examples
   
 ```php
+use Telebot\Core\Bot,
+    Telebot\Core\Context;
+    
 $settings = [
         'api_token'  => '',
         'base_url'   => 'https://api.telegram.org/',
@@ -20,9 +23,6 @@ $settings = [
             'proxy_type'    => '',
         ]
 ];
-
-use Telebot\Core\Bot,
-    Telebot\Core\Context;
     
 $bot = new Bot($settings);
 $bot->cmd('start', function(Context $ctx){
